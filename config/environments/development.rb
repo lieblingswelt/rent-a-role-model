@@ -15,7 +15,7 @@ RentARoleModel::Application.configure do
 
   # Don't care if the mailer can't send.
   #config.action_mailer.raise_delivery_errors = false
-  #for development use mailcatcher, run $gem install mailcatcher
+  #for development use mailcatcher, run $gem install mailcatcher, start with $mailcatcher
   ActionMailer::Base.delivery_method = :smtp 
   ActionMailer::Base.smtp_settings = { 
   :address => "localhost", 

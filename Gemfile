@@ -16,6 +16,11 @@ end
 group :production do
  # gem 'pg'
   gem 'rails_12factor'
+
+ #for contact form in production use
+ #gem 'mandrill-api' # If Mandrill API is used
+ #gem 'postmark-rails' # If Postmark API is used
+
 end
 
 

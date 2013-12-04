@@ -1,6 +1,6 @@
 RentARoleModel::Application.configure do
+  
   # Settings specified here will take precedence over those in config/application.rb.
-
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -16,11 +16,22 @@ RentARoleModel::Application.configure do
   # Don't care if the mailer can't send.
   #config.action_mailer.raise_delivery_errors = false
   #for development use mailcatcher, run $gem install mailcatcher, start with $mailcatcher
-  ActionMailer::Base.delivery_method = :smtp 
-  ActionMailer::Base.smtp_settings = { 
-  :address => "localhost", 
-  :port => 1025, 
-  :domain => " " } 
+  #ActionMailer::Base.delivery_method = :smtp 
+  #ActionMailer::Base.smtp_settings = { 
+  #:address => "localhost", 
+  #:port => 1025, 
+  #:domain => " " } 
+
+  #temp for testing production settings gmail
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = {
+  #:address => ENV['smtp.gmail.com'], # smtp.gmail.com
+  #:port => 587,
+  #:user_name => ENV['lisa.junger'],
+  #:password => ENV['sdajeP982'],
+  #:authentication => 'plain',
+  #:enable_starttls_auto => true
+  #}
   
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

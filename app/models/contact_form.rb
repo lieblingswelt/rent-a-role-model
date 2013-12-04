@@ -12,8 +12,9 @@ class ContactForm < MailForm::Base
 def headers
     {
       :subject => "Rent a Role Model request",
+      :from => "#{name} <#{Rails.application.config.action_mailer.default_options[:from]}>",
       :to => @user.email,
-      :from => %("#{name}" <#{email}>),
+      :reply_to => email,
       :message => %("#{message}")
     }
   end
